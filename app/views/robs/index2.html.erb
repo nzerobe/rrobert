@@ -1,11 +1,64 @@
-<%= yield(:rob) %>
-<% content_for :rob do %>
-  <div class="large-8 small-9 columns">
-  <%= rob_form_for @robs do |f| %>
-    <%= f.text_field :title_cont, class: "radius-left expand", placeholder: "Movie title" %>
-  </div>
-    <div class="large-4 small-3 columns">
-      <%= f.submit "rob", class: "radius-right button" %>
-    </div>
-  <% end %>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+   <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>DIVE Corporation</title>
+  </head>
+  <body>
+    <div class="container">
+    <header class="header clearfix">
+    <a href="index.html">
+      <img src="./images/logo.png" class="logo_image">
+    </a>
+
+   <nav>
+       <ul class="top_menu clearfix">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Business content</a></li>
+          <li><a href="#">Company profile</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </nav>
+
+</header>
+<img src="./images/contact.png" class="image_area">
+    <div class="wrapper clearfix">
+
+
+  <aside class="side_menu">
+  <nav class="side_menu clearfix">
+  <ul>
+    <li ><a href="#">Business contents</a></li>
+    <li><a href="#">Company profile</a></li>
+    <li class="point"><a href="#">Contact Us</a></li>
+  </ul>
+</nav>
+
+ 
+</aside>
+
+  <article class="content">
+<form action="">
+  
+      <p>Text input field
+      <input type="text" class="info"></p>
+      <p>Password type input field
+      <input type="password" class="info 2"></p>
+      <p>Other type input field
+      <input type="other" class="info3"></p>
+    <p>
+      <input type="submit" class="info4"></p>
+      
+      
+   
+   </form>
+</article>
+<div>
+   <footer class="footer">
+      <p>Copyright © 2016 DIVE INC All RIGHTS RESERVED.</p>
+</footer>
+</div>
+  </body>
+</html>

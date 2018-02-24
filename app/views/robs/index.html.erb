@@ -1,3 +1,10 @@
+
+  <%= search_form_for @search do |f| %>
+    <%= f.search_field :title_cont %>
+  
+      <%= f.submit %>
+
+<% end %>
 <h1>List of robs</h1>
 
 <table>
@@ -6,7 +13,7 @@
     <th>Contents</th></th>
   </tr>
 
-<% @robs.each do |rob| %>
+<% @bs.each do |rob| %>
   <tr>
     <td><%= rob.title %></td>
     <td><%= rob.content %></td>
@@ -14,7 +21,7 @@
     <td><%= link_to "Edit this rob", edit_rob_path(rob.id) %></td>
     <td><%= link_to link_to 'Check the details', rob_path(rob.id) %></td>
     <td><%= link_to link_to "Edit this rob", edit_rob_path(rob.id) %></td>
-    <td><%= link_to link_to 'Delete this rob', rob_path(rob.id), method: :delete ,data: { confirm: 'Are you sure?' } %>%></td>
+    <td><%= link_to link_to 'Delete this rob', rob_path(rob.id), method: :delete ,data: { confirm: 'Are you sure?' } %></td>
     
   </tr>
 <% end %>
@@ -23,3 +30,6 @@
 
 <br>
 <%= link_to 'Post a new rob', new_rob_path %>
+
+
+

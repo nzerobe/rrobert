@@ -5,6 +5,8 @@ class RobsController < ApplicationController
   
   def index
     @robs = Rob.all
+    @search = Rob.search(params[:q])
+    @bs = @search.result
   end
 
   # Add
