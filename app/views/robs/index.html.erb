@@ -1,6 +1,6 @@
 
   <%= search_form_for @search do |f| %>
-    <%= f.search_field :title_cont %>
+    <%= f.search_field :content %>
   
       <%= f.submit %>
 
@@ -9,13 +9,13 @@
 
 <table>
   <tr>
-    <th>Title</th>
+   
     <th>Content</th></th>
   </tr>
 
 <% @bs.each do |rob| %>
   <tr>
-    <td><%= rob.title %></td>
+  
     <td><%= rob.content %></td>
    <td><%= link_to 'Check the details', rob_path(rob.id) %></td>
     <td><%= link_to "Edit this rob", edit_rob_path(rob.id) %></td>
