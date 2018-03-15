@@ -1,0 +1,2 @@
+module ClenieHelper
+end
