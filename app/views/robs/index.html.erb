@@ -1,33 +1,53 @@
 
-  <%= search_form_for @search do |f| %>
-    <%= f.search_field :content %>
-  
-      <%= f.submit %>
-
-<% end %>
-<h1>List of robs</h1>
-
-<table>
-  <tr>
-   
-    <th>Content</th></th>
-  </tr>
-
-<% @bs.each do |rob| %>
-  <tr>
-  
-    <td><%= rob.content %></td>
-   <td><%= link_to 'Check the details', rob_path(rob.id) %></td>
-    <td><%= link_to "Edit this rob", edit_rob_path(rob.id) %></td>
-    <td><%= link_to link_to 'Delete this rob', rob_path(rob.id), method: :delete ,data: { confirm: 'Are you sure?' } %></td>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+      
+        <span class="sr-only">Bootstrap</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="#">Bootstrap
+</a>
+    </div>
+    <div id="gnavi" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li><a href="">top</a></li>
+        <li><a href="">menu1</a></li>
+        <li><a href="">menu2</a></li>
+      </ul>
+    </div>
+    <div class="image"><%= image_tag "pand.png" %></div>
+  </div>
+</nav>
+<div class="container">
+    <header class="header">Bootstrap</header>
     
-  </tr>
-<% end %>
- 
-</table>
-
-<br>
-<%= link_to 'Post a new rob', new_rob_path %>
-
-
-
+    <article>
+        <div class="contents">
+          <h1> Information1</h1>
+            <ul class="row">
+                <li class="col-sm-6 col-md-3">contents1</li>
+                <li class="col-sm-6 col-md-3">contents2</li>
+                <li class="col-sm-6 col-md-3">contents3</li>
+                <li class="col-sm-6 col-md-3">contents4</li>
+            </ul>
+        </div>
+        
+    </article>
+    <article>
+        <div class="contents">
+          <h1> Information2</h1>
+            <ul class="row">
+                <li class="col-sm-6 col-md-3">contents1</li>
+                <li class="col-sm-6 col-md-3">contents2</li>
+                <li class="col-sm-6 col-md-3">contents3</li>
+                <li class="col-sm-6 col-md-3">contents4</li>
+            </ul>
+        </div>
+       
+    </article>
+</div>
