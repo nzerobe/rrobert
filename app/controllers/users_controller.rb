@@ -4,6 +4,7 @@ class UsersController < ApplicationController
     end
     def create
      @user = User.new(user_params)
+     @model = current_user.models.new
      if @user.save
       redirect_to user_path(@user.id)
     else
