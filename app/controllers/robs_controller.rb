@@ -1,5 +1,5 @@
 class RobsController < ApplicationController
-  Before_action : Set_rob, only: [:new :edit, :show]
+  #Before_action : Set_rob, only: [:new :edit, :show]
   def index
     @robs = Rob.all
   end
