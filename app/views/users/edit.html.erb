@@ -1,7 +1,5 @@
-<h1>Sign up</h1>
-
-
-<%= form_with(model: @robs, local: true) do |f| %>  
+<%= form_with(model: @user, local: true) do |form| %>
+  
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -14,5 +12,5 @@
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation %>
 
-  <%= f.submit "Create my account" %>
+  <%= form.submit %>
 <% end %>

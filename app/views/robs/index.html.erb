@@ -50,4 +50,11 @@
         </div>
        
     </article>
+    
+    <% @robs.each do |blog| %>
+  
+    <%= link_to "Edit this rob", edit_rob_path(rob.id) %>
+
+<% end %>
 </div>
+<%= link_to 'Post a new rob', new_rob_path %>
