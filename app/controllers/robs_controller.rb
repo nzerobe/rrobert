@@ -37,6 +37,7 @@ class RobsController < ApplicationController
   #Omitted
   private
   #Before_action : Set_rob, only: [:show, :edit, :update, :destroy] 
+  
    def rob_params
     params.require(:rob).permit(:name, :email, :password,
                                  :password_confirmation)
