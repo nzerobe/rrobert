@@ -36,22 +36,19 @@
                 <li class="col-sm-6 col-md-3">contents4</li>
             </ul>
         </div>
-       <% @robs.each do |rob| %>
-  <tr>
-    <td><%= rob.title %></td>
-    <td><%= rob.content %></td>
-
-    <td><%= link_to 'Check the details', rob_path(rob.id) %></td>
-    <td><%= link_to "Edit this rob", edit_rob_path(rob.id) %></td>
-  </tr>
-<% end %> 
+        
+    </article>
+    <article>
+        <div class="contents">
+          <h1> Information2</h1>
+            <ul class="row">
+                <li class="col-sm-6 col-md-3">contents1</li>
+                <li class="col-sm-6 col-md-3">contents2</li>
+                <li class="col-sm-6 col-md-3">contents3</li>
+                <li class="col-sm-6 col-md-3">contents4</li>
+            </ul>
+        </div>
+       
     </article>
     
-
-</table>
-
-<br>
-    </article>
-    
-<%= link_to 'Post a new rob', new_rob_path %>
-</div>
+    </div>
