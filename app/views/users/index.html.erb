@@ -49,6 +49,16 @@
             </ul>
         </div>
        
+     <% @user.each do |user| %>
+  <tr>
+    <td><%= user.title %></td>
+    <td><%= user.content %></td>
+
+    <td><%= link_to 'Check the details', user_path(user.id) %></td>
+    <td><%= link_to "Edit this user", edit_user_path(user.id) %></td>
+  </tr>
+<% end %> 
     </article>
-    
+  
     </div>
+<%= link_to 'Post a new user', new_user_path %>

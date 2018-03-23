@@ -1,6 +1,8 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :users do |t|
+      t.string :title
+      t.text :content
       t.string :name
       t.string :email
       t.string :password_digest
@@ -13,7 +15,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.string :credit
       t.string :balance
       t.string :other_transactions
-      
+
       t.timestamps
     end
   end

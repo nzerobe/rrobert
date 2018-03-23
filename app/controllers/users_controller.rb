@@ -12,7 +12,7 @@ class UsersController < ApplicationController
      #@model = current_user.models.new
      if @user.save
     
-      redirect_to user_path(@user.id)
+      redirect_to user_index(@user.id)
     else
       render 'new'
      end
