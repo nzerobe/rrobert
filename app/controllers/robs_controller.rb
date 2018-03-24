@@ -15,6 +15,7 @@ class RobsController < ApplicationController
       redirect_to robs_path, Notice: "You have created new rob!"
     else
       # Redraw the input form.
+     flash[:danger] = 'Login failed'
       render 'new'
     end
   end

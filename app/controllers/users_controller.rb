@@ -12,7 +12,7 @@ class UsersController < ApplicationController
      #@model = current_user.models.new
      if @user.save
     
-      redirect_to user_index(@user.id)
+      redirect_to user_path(@user.id)
     else
       render 'new'
      end
@@ -20,6 +20,14 @@ class UsersController < ApplicationController
     
     def show
     @user = User.find(params[:id])
+    end
+    def update
+    @user = User.find(params[:id])
+    if user.update(user_params)
+      redirect_to user_path, Notice: "You have edited this user！"
+    else
+      render 'edit'
+    end
     end
     
     private
