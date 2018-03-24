@@ -6,11 +6,12 @@ Rails.application.routes.draw do
   #get 'robs/index'
 
  
-  
-  resources :robs, only: [:new, :create, :show]
+  resources :robs
+  post 'destroy/index'
+  resources :robs, only: [:new, :create, :show, :edit]
   #post 'destroy/index'
-  resources :users, only: [:new, :create, :show, :edit]
+  resources :users, only: [:new, :create, :show, :edit, :update]
   resources :sessions, only: [:new, :create, :edit, :destroy]
   resources :robs
-  resources :users
+  # resources :users
   end
