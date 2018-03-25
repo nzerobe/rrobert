@@ -11,6 +11,6 @@ module SessionsHelper
          if logged_in?
              redirect_to_session_path
          end
-     end    
+    end    
    
 end

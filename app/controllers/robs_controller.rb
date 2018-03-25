@@ -37,6 +37,7 @@ class RobsController < ApplicationController
    end
    
   #Omitted
+  
   private
   #Before_action : Set_rob, only: [:show, :edit, :update, :destroy] 
   
