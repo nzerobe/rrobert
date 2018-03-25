@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   #post 'destroy/index'
   resources :robs, only: [:new, :create, :show, :edit]
   #post 'destroy/index'
-  resources :users, only: [:new, :create, :show, :edit, :update]
+  resources :users, only: [:new, :show, :edit, :update]
   resources :sessions, only: [:new, :create, :edit, :destroy]
   resources :robs
   #

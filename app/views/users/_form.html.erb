@@ -19,8 +19,21 @@
     <%= form.label :content %>
     <%= form.text_field :content %>
   </div>
+  <%= form_with(model: @user, local: true) do |f| %>  
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+
   <%= form.submit %>
+<% end %>
 <% end %>
 
 
-<%= link_to "Return to List of robs screen", robs_path %>
