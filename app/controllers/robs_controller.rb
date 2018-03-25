@@ -1,5 +1,5 @@
 class RobsController < ApplicationController
-  #Before_action : Set_rob, only: [:new :edit, :show]
+  before_action :set_rob, only: [:show, :edit, :update]
   def index
     @robs = Rob.all
   end
@@ -15,7 +15,7 @@ class RobsController < ApplicationController
       redirect_to robs_path, Notice: "You have created new rob!"
     else
       # Redraw the input form.
-     flash[:danger] = 'Login failed'
+     
       render 'new'
     end
   end
@@ -57,8 +57,8 @@ class RobsController < ApplicationController
   end
   #Omission
   #Omitted
-  def authenticate_user!
-    if user_signed_in?
+  def authenticate_rob!
+    if rob_signed_in?
       super
     else
       redirect_to login_path, :notice => 'if you want to add a notice'

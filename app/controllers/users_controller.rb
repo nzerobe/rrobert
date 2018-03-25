@@ -42,3 +42,16 @@ class UsersController < ApplicationController
                                  :password_confirmation)
     end
 end
+
+#def user_params
+  # params.require(:user).permit(:title, :content)
+  #   end
+     
+    #if @user.save
+      # Switch to the list screen and display a message saying "You have created new user!"
+     # redirect_to users_path, notice: "You have created new user!"
+    #else
+      # Redraw the input form.
+      #render 'new'
+    #end
+ 
