@@ -1,8 +1,8 @@
-<h1><%= @user.name %> Screen </h1>
+<h1>Create new Rob</h1>
 <p>Title: <%= @user.title %></p>
 <p>Contents: <%= @user.content %></p>
 
-<%= form_with(model: @user, local: true) do |form| %>
+<%= form_with(model: @robs, local: true) do |form| %>
 
   <div class="blog_title">
     <%= form.label :title %>
