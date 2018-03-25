@@ -1,5 +1,6 @@
 class RobsController < ApplicationController
   before_action :set_rob, only: [:show, :edit, :update]
+  #Before_action : Force_login
   def index
     @robs = Rob.all
   end

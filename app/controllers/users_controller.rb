@@ -4,15 +4,16 @@ class UsersController < ApplicationController
     end
     
     def new
-    @user = User.new
+    @user = User.new(user_params)
     end
+    
     
     def create
      @user = User.new(user_params)
      #@model = current_user.models.new
      if @user.save
-    
-      redirect_to user_path(@user.id)
+      # Switch to the list screen and display a message saying "You have created new blog!"
+       redirect_to new_user_path, notice: "You have created new user!"
     else
       render 'new'
      end
@@ -30,7 +31,7 @@ class UsersController < ApplicationController
     def update
       @user = User.find(params[:id])
       if @user.update(user_params)
-        redirect_to user_path, Notice: "You have edited this user！"
+        redirect_to rob_path, Notice: "You have edited this user！"
       else
         render 'edit'
       end
